@@ -1,0 +1,18 @@
+{
+  "development": {
+    "dialect": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "database": "dev_database",
+    "username": "dev_user",
+    "password": "dev_password"
+  },
+  "production": {
+    "dialect": "postgresql",
+    "host": "db.prodserver.com",
+    "port": 5432,
+    "database": "prod_data",
+    "username": "prod_service",
+    "password": "PROD_SECRET_PASSWORD"
+  }
+}
