@@ -1,0 +1,13 @@
+---
+- name: Deploy custom hosts file package
+  hosts: webservers  # Target group defined in hosts.ini
+  become: yes        # Run with elevated privileges (sudo)
+
+  tasks:
+    - name: Ensure /etc/hosts file is configured
+      ansible.builtin.template:
+        src: templates/hosts.j2      # Source template file
+        dest: /etc/hosts             # Destination on the managed node
+        owner: root
+        group: root
+        mode: '0644'
